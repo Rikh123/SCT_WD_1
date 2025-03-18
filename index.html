@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC</title>
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Font Awesome CDN Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS File Link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .navbar a {
+            position: relative; /* Ensure the pseudo-element is positioned correctly */
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--first-color);
+            transition: width 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: var(--first-color); /* Change to desired hover color */
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        .navbar.scroll-header {
+            background-color: rgba(255, 255, 255, 0.8); /* Change navbar background on scroll */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        /* Active link */
+        .active-link {
+            color: rgb(188, 17, 17); /* Set the active link color to red */
+        }
+
+        .active-link::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <!-- Menu button -->
+        <div id="menu-btn" class="fas fa-bars" onclick="toggleNavbar()"></div>
+        <div id="close-btn" class="fas fa-times" onclick="toggleNavbar()" style="display: none;"></div>
+<!-- Menu button now toggles the navbar visibility -->
+
+        <a href="#" class="logo">KFC <i class="fas fa-drumstick-bite"></i></a>
+
+        <nav class="navbar" id="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#book">Delivery</a>
+        </nav>
+
+        <a href="#menu" class="btn">Order Now</a>
+    </header>
+
+    <!-- HOME -->
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>Want to take a bite </h3>
+                <a href="#book" class="btn">buy  now</a>
+            </div>
+
+            <div class="image">
+                <img src="image/home-img-1.png" class="main-home-image" alt="">
+            </div>
+        </div>
+
+        <div class="image-slider">
+            <img src="image/home-img-1.png" alt="">
+            <!-- <img src="image/home-img-2.png" alt=""> -->
+            <img src="image/home-img-3.png" alt="">
+            <img src="https://th.bing.com/th/id/R.8e225c8caee9ecde791943fa32854435?rik=goIbFZwsWHDjxw&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f2%2fCooked-Chicken-PNG-Transparent-Image.png&ehk=7%2bHP%2fz4RTrT3y0QjF3eVEI5fRjw2jVhGO0ziKQgqmZw%3d&risl=&pid=ImgRaw&r=0" alt="">
+            <img src="https://pngimg.es/d/kfc_food_PNG53.png" alt="">
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h1 class="heading">about us <span>why choose us</span></h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="https://th.bing.com/th/id/R.ac52961c79f1f945fda98e3b4c74b08d?rik=Ji3%2fT7Xy5O1RNw&riu=http%3a%2f%2fmycommunitysource.com%2fwp-content%2fuploads%2f2021%2f04%2fJersey-Mikes-Subs-in-Freehold-Fischer-Blvd.jpeg&ehk=0V8%2bEpNBp3p7ljWAQ7RUTZwpydylgqlSj0KTTmMla7E%3d&risl=&pid=ImgRaw&r=0" alt="">
+            </div>
+
+            <div class="content">
+                <h3 class="title">What Makes Our Chicken Special!</h3>
+                <p>At KFC, we take pride in our chicken. Our secret blend of herbs and spices, combined with our unique cooking process, ensures that every piece of KFC chicken is crispy on the outside and juicy on the inside. Whether you prefer Original Recipe, Extra Crispy, or Kentucky Grilled Chicken, you can trust that you're getting the best chicken experience possible.</p>
+                <a href="#" class="btn">read more</a>
+                <div class="icons-container">
+                    <div class="icons">
+                        <img src="image/about-icon-1.png" alt="">
+                        <h3>quality chicken</h3>
+                    </div>
+                    <div class="icons">
+                        <img src="https://cdn.slidesharecdn.com/ss_thumbnails/kfc-161109130529-thumbnail.jpg?width=640&height=640&fit=bounds" alt="">
+                        <h3>our branches</h3>
+                    </div>
+                    <div class="icons">
+                        <img src="https://www.kfcpakistan.com/static/media/Delivery.793adbaa710baf75ba78.png" alt="">
+                        <h3>free delivery</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+        <h1 class="heading">our menu <span>popular menu</span></h1>
+
+        <div class="box-container">
+            <a href="#" class="box">
+                <img src="https://th.bing.com/th/id/R.8e225c8caee9ecde791943fa32854435?rik=goIbFZwsWHDjxw&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f2%2fCooked-Chicken-PNG-Transparent-Image.png&ehk=7%2bHP%2fz4RTrT3y0QjF3eVEI5fRjw2jVhGO0ziKQgqmZw%3d&risl=&pid=ImgRaw&r=0" alt="">
+                <div class="content">
+                    <h3>Original Recipe Chicken</h3>
+                    <p>Our famous Original Recipe Chicken is made with a secret blend of 11 herbs and spices and cooked to golden perfection.</p>
+                    <span>₹350</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="https://pngimg.es/d/kfc_food_PNG53.png" alt="">
+                <div class="content">
+                    <h3>Family Bucket Meal</h3>
+                    <p>Enjoy a variety of our delicious chicken pieces with sides and drinks in our Family Bucket Meal.</p>
+                    <span>₹800</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="https://www.citypng.com/public/uploads/small/11653270695eambebc2ohxjpkpa7svgsikbhb3gu3ki3sgiw8zwlxhs7hohojhatsosuhthfgzr09x8yd7iyeyronhf4iwaz2uobpneywouxm8e.png" alt="">
+                <div class="content">
+                    <h3>Chicken Burger</h3>
+                    <p>Delicious chicken patty with fresh lettuce and mayonnaise in a soft burger bun.</p>
+                    <span>₹150</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="https://th.bing.com/th/id/R.2746111161b0610e162715ff2708df9c?rik=pX6sMlA6Tkn7Kg&riu=http%3a%2f%2fofficialpsds.com%2fimageview%2f7n%2fy2%2f7ny26v_large.png%3f1521316587&ehk=6gud66RuGPk01QlZuOxIi7%2ftU0ZTxb3%2bnD6B7GGLUuw%3d&risl=&pid=ImgRaw&r=0" alt="">
+                <div class="content">
+                    <h3>Chicken Sandwich</h3>
+                    <p>Try our crispy chicken sandwich, made with a tender chicken fillet and special sauce on a toasted bun.</p>
+                    <span>₹200</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="https://www.pngplay.com/wp-content/uploads/15/French-Fries-Free-PNG.png" alt="">
+                <div class="content">
+                    <h3>French Fries</h3>
+                    <p>Golden and crispy french fries, a perfect side for any meal.</p>
+                    <span>₹80</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="https://i.pinimg.com/originals/aa/7a/76/aa7a7608ba162d18c97a39e07ad0d1b5.png" alt="">
+                <div class="content">
+                    <h3>Coleslaw</h3>
+                    <p>Refreshing coleslaw made with fresh cabbage and carrots in a creamy dressing.</p>
+                    <span>₹60</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- BOOK -->
+    <section class="book" id="book">
+        <h1 class="heading">For Delivery <span>delivery</span></h1>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </head>
+    <body>
+        <!-- Inside your HTML -->
+       <!-- Inside your HTML -->
+       <style>
+        
+        .box {
+            text-align: center;
+        }
+        .box img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    
+    <div class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Scan the QR code to make a UPI payment</h3>
+                <p style="color: rgb(248, 26, 26); font-style: italic; font-size: 2rem;">*You will get a confirmation message or call after payment through your Phone number</p>
+                <a href="upi://pay?pa=yourupiaddress@bankname&pn=MerchantName&mc=1234&tid=123456&type=upi&tn=Your%20Transaction%20Description&am=100&cu=INR">
+                    <img src="image/cc.jpg" alt="UPI QR Code" style="width: 300px; height: 300px; object-fit: cover; object-position: center;">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+    </div>
+    
+    <section>
+        <form id="contactForm" onsubmit="sendMessage(); return false;">
+            <input type="text" id="name" placeholder="Full Name" class="box">
+            <input type="tel" id="phone" placeholder="Phone Number" class="box">
+            <input type="text" id="address" placeholder="Address" class="box">
+            <textarea id="order" placeholder="Type of Order" class="box" cols="30" rows="10"></textarea>
+            <input type="submit" value="Place Order" class="btn">
+        </form>
+    </section>
+    
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scroll-header');
+            } else {
+                nav.classList.remove('scroll-header');
+            }
+        });
+
+        // Ensure the navbar has the scrolled class on page load if already scrolled
+        if (window.scrollY > 50) {
+            nav.classList.add('scroll-header');
+        }
+
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.navbar a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop - sectionHeight / 3 && pageYOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active-link');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active-link');
+        }
+    });
+});
+
+
+
+        function sendMessage() {
+            var name = $('#name').val();
+            var phone = $('#phone').val();
+            var address = $('#address').val();
+            var order = $('#order').val();
+
+            if (name.trim() === '' || phone.trim() === '' || address.trim() === '' || order.trim() === '') {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            var Body = 'Name: ' + name + '<br>Phone Number: ' + phone + '<br>Address: ' + address + '<br>Type of Order: ' + order;
+
+            Email.send({
+                SecureToken: "f3069ada-6257-4967-91bd-9b7cc9b2c906",
+                To: 'rikhishkh@gmail.com',
+                From: "rikhishkh@gmail.com",
+                Subject: "Order",
+                Body: Body
+            }).then(
+                function(message) {
+                    if (message === 'OK') {
+                        alert('Order placed successfully! You will receive a call or message in a few minutes!');
+                        $('#contactForm')[0].reset(); // Reset the form
+                    } else {
+                        console.error(message);
+                        alert('There was an error sending the message.');
+                    }
+                }
+            );
+        }
+    </script>
+    
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>our branches</h3>
+                <a href="#"><i class="fas fa-arrow-right"></i> Changangei</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Kwkheithel</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Thangmeiband</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Kongba</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Nambol</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fas fa-arrow-right"></i> home</a>
+                <a href="#about"><i class="fas fa-arrow-right"></i> about</a>
+                <a href="#menu"><i class="fas fa-arrow-right"></i> menu</a>
+                <a href="#book"><i class="fas fa-arrow-right"></i> Delivery</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fas fa-phone"></i> +91-9362807677</a>
+                <a href="#"><i class="fas fa-envelope"></i> <span class="lowercase">rikhishkh@gmail.com</span></a>
+                <a href="#"><i class="fa fa-location-arrow"></i> Changangei Mayai Leikai Opposite Main Gate Airport</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+            </div>
+        </div>
+
+        <div class="credit">created by <span>Rikhish Khumanthem</span> | all rights reserved</div>
+    </section>
+
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS File Link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+</create_file>
